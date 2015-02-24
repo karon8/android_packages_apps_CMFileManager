@@ -30,6 +30,7 @@
         <item name="android:colorPrimaryDark">@color/material_palette_blue_primary_dark</item>
         <item name="android:colorControlHighlight">@color/material_palette_blue_accent_dark</item>
         <item name="android:colorAccent">@color/material_palette_blue_primary_dark</item>
+        <item name="android:navigationBarColor">@color/material_palette_blue_primary_dark</item>
         <item name="android:actionMenuTextColor">@android:color/white</item>
     </style>
 
@@ -41,6 +42,7 @@
         <item name="android:colorPrimaryDark">@color/material_palette_blue_primary_dark</item>
         <item name="android:colorControlHighlight">@color/material_palette_blue_accent_dark</item>
         <item name="android:colorAccent">@color/material_palette_blue_primary</item>
+        <item name="android:navigationBarColor">@color/material_palette_blue_primary_dark</item>
         <item name="android:actionBarStyle">@style/FileManager.Widget.ActionBar.White</item>
         <item name="android:homeAsUpIndicator">@drawable/material_ripple_up_arrow</item>
         <item name="android:actionMenuTextColor">@android:color/white</item>
@@ -56,6 +58,7 @@
         <item name="android:colorPrimaryDark">@color/material_palette_blue_primary_dark</item>
         <item name="android:colorControlHighlight">@color/material_palette_blue_accent_dark</item>
         <item name="android:colorAccent">@color/material_palette_blue_accent</item>
+        <item name="android:navigationBarColor">@color/material_palette_blue_primary_dark</item>
         <item name="android:actionMenuTextColor">@android:color/white</item>
     </style>
 
@@ -65,6 +68,7 @@
         <item name="android:colorPrimaryDark">@color/material_palette_blue_primary_dark</item>
         <item name="android:colorControlHighlight">@color/material_palette_blue_accent_dark</item>
         <item name="android:colorAccent">@color/material_palette_blue_primary</item>
+        <item name="android:navigationBarColor">@color/material_palette_blue_primary_dark</item>
         <item name="android:actionBarStyle">@style/FileManager.Widget.ActionBar.White</item>
         <item name="android:homeAsUpIndicator">@drawable/material_ripple_up_arrow</item>
         <item name="android:actionMenuTextColor">@android:color/white</item>
@@ -99,6 +103,7 @@
         <item name="android:colorAccent">@color/material_palette_blue_primary</item>
         <item name="android:colorPrimary">@color/material_palette_blue_primary</item>
         <item name="android:colorPrimaryDark">@color/material_palette_blue_primary_dark</item>
+        <item name="android:navigationBarColor">@color/material_palette_blue_primary_dark</item>
         <item name="android:background">@color/material_palette_blue_primary</item>
     </style>
 
