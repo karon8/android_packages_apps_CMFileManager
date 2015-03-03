@@ -78,6 +78,11 @@ public final class FileHelper {
 
     private static final String TAG = "FileHelper"; //$NON-NLS-1$
 
+    // Scheme for file and directory picking
+    public static final String FILE_URI_SCHEME = "file"; //$NON-NLS-1$
+    public static final String FOLDER_URI_SCHEME = "folder"; //$NON-NLS-1$
+    public static final String DIRECTORY_URI_SCHEME = "directory"; //$NON-NLS-1$
+
     /**
      * Special extension for compressed tar files
      */
@@ -721,14 +726,28 @@ public final class FileHelper {
                     break;
 
                 case MIME_TYPE_RESTRICTION:
+                    String[] mimeTypes = null;
                     if (value instanceof String) {
-                        String mimeType = (String)value;
-                        if (mimeType.compareTo(MimeTypeHelper.ALL_MIME_TYPES) != 0) {
+                        mimeTypes = new String[] {(String) value};
+                    } else if (value instanceof String[]) {
+                        mimeTypes = (String[]) value;
+                    }
+                    if (mimeTypes != null) {
+                        boolean matches = false;
+                        for (String mimeType : mimeTypes) {
+                            if (mimeType.compareTo(MimeTypeHelper.ALL_MIME_TYPES) == 0) {
+                                matches = true;
+                                break;
+                            }
                             // NOTE: We don't need the context here, because mime-type
                             // database should be loaded prior to this call
-                            if (!MimeTypeHelper.matchesMimeType(null, fso, mimeType)) {
-                                return false;
+                            if (MimeTypeHelper.matchesMimeType(null, fso, mimeType)) {
+                                matches = true;
+                                break;
                             }
+                        }
+                        if (!matches) {
+                            return false;
                         }
                     }
                     break;
